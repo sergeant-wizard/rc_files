@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/ryomiyajima/repos/PalmX/PalmXLib/cocos2dx-WebView/android/java/build/generated/source/buildConfig'
 let g:netrw_dirhist_2='/Users/ryomiyajima/repos/PalmX/proj.android/build'
 let g:netrw_dirhist_3='/Users/ryomiyajima/repos/PalmX/proj.android'
+let g:netrw_dirhist_4='/Users/ryomiyajima/.vim/after'
