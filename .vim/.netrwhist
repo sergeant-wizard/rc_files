@@ -1,8 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/ryomiyajima/.vim'
-let g:netrw_dirhist_2='/Users/ryomiyajima/.rbenv/versions'
-let g:netrw_dirhist_3='/Users/ryomiyajima/repos/palmx-api'
-let g:netrw_dirhist_4='/Users/ryomiyajima/repos/palmx-api/app/views/items'
-let g:netrw_dirhist_5='/Users/ryomiyajima/repos/palmx-api/app'
-let g:netrw_dirhist_6='/Users/ryomiyajima/repos/palmx-api/app/views/characters'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/ryomiyajima/repos/PalmX/PalmXLib/cocos2dx-WebView/android/java/build/generated/source/buildConfig'
+let g:netrw_dirhist_2='/Users/ryomiyajima/repos/PalmX/proj.android/build'
+let g:netrw_dirhist_3='/Users/ryomiyajima/repos/PalmX/proj.android'

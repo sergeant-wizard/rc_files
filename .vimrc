@@ -22,6 +22,7 @@ filetype plugin on
 
 "C++ completion
 au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
+au BufNewFile,BufRead *.cpp set syntax=cpp
 
 "vim-latex
 set shellslash
@@ -50,8 +51,7 @@ language messages C
 set termencoding=utf8
 set encoding=utf8
 set fileencoding=utf8
-"set fileformats=dos
-set fileformats=unix,dos
+set fileformats=unix,dos,mac
 
 execute pathogen#infect()
 
