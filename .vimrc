@@ -10,6 +10,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'kien/ctrlp.vim'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'vim-scripts/mru.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -86,3 +88,6 @@ augroup HighlightTrailingSpaces
   autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
   autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
 augroup END
+
+" ctrlp options
+let g:ctrlp_custom_ignore = 'node_modules'
