@@ -12,6 +12,8 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'kien/ctrlp.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'vim-scripts/mru.vim'
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
