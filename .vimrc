@@ -14,6 +14,7 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'vim-scripts/mru.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
+Plugin 'elzr/vim-json'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -73,8 +74,6 @@ set termencoding=utf8
 set encoding=utf8
 set fileencoding=utf8
 set fileformats=unix,dos,mac
-
-execute pathogen#infect()
 
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
