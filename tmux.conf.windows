@@ -44,12 +44,6 @@ bind -r J resize-pane -D 5
 bind -r K resize-pane -U 5
 bind -r L resize-pane -R 5
 
-# explicitly disable mouse control
-setw -g mode-mouse off
-set -g mouse-select-pane off
-set -g mouse-resize-pane off
-set -g mouse-select-window off
-
 # use vim keybindings in copy mode
 setw -g mode-keys vi
 
