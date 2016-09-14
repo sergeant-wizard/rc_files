@@ -7,12 +7,10 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-scripts/indentpython.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
-Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-fugitive'
+Plugin 'davidhalter/jedi-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -20,7 +18,7 @@ filetype plugin indent on
 " END vundle
 
 " python indentation
-au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
+au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent fileformat=unix
 
 " virtualenv support
 py << EOF
@@ -36,7 +34,6 @@ EOF
 let python_highlight_all=1
 syntax on
 
-map yg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 set encoding=utf-8
 
 " ctrlp options
