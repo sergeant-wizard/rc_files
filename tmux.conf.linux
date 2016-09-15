@@ -1,6 +1,11 @@
 unbind C-l
 set-option -g prefix M-u
 
+bind-key -t vi-copy 'v' begin-selection
+bind-key -t vi-copy 'y' copy-pipe 'xclip -in -selection clipboard'
+
+set -g default-terminal "screen-256color"
+
 # set scrollback history to 10000 (10k)
 set -g history-limit 10000
 
