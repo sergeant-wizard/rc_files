@@ -11,6 +11,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on
@@ -51,3 +52,8 @@ let g:ycm_add_preview_to_completeopt = 1
 " make backspace work over lines
 set backspace=indent,eol,start
 
+" share clipborad
+set clipboard=unnamed
+
+set background=dark
+colorscheme solarized
