@@ -7,11 +7,8 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-scripts/indentpython.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'nvie/vim-flake8'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on
@@ -55,5 +52,6 @@ set backspace=indent,eol,start
 " share clipborad
 set clipboard=unnamed
 
-set background=dark
-colorscheme solarized
+set nobackup
+set nowritebackup
+set noswapfile
