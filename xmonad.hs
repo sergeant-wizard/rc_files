@@ -5,4 +5,5 @@ import XMonad.Config.Gnome
 main = xmonad $ gnomeConfig
     { borderWidth = 3
     , modMask = mod4Mask
+    , terminal = "urxvt"
     }
