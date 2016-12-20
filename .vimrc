@@ -9,6 +9,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'dikiaap/minimalist'
 
 call vundle#end()
 filetype plugin indent on
@@ -55,3 +56,6 @@ set clipboard=unnamed
 set nobackup
 set nowritebackup
 set noswapfile
+
+set t_Co=256
+colorscheme minimalist
