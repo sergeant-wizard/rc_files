@@ -9,7 +9,30 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'hdima/python-syntax'
+
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-colorscheme-switcher'
+
+" colors
+Plugin 'nielsmadan/harlequin'
+Plugin 'liuchengxu/space-vim-dark'
+Plugin 'albertocg/contrastneed-theme'
+Plugin 'Marfisc/vorange'
+Plugin 'roosta/vim-srcery'
+Plugin 'MvanDiemen/brighton.vim'
+Plugin 'tyrannicaltoucan/vim-deep-space'
 Plugin 'dikiaap/minimalist'
+Plugin 'davb5/wombat256dave'
+Plugin 'encody/nvim'
+Plugin 'Blevs/vim-dzo'
+Plugin 'kamwitsta/nordisk'
+Plugin 'KeitaNakamura/neodark.vim'
+Plugin 'tyrannicaltoucan/vim-quantum'
+Plugin 'bcicen/vim-vice'
+Plugin 'dracula/vim'
+Plugin 'YorickPeterse/happy_hacking.vim'
+
 
 call vundle#end()
 filetype plugin indent on
@@ -32,9 +55,8 @@ let g:ctrlp_custom_ignore = 'node_modules'
 set ic
 set ar
 set incsearch
+set nowrap
 
-set cursorline
-hi CursorLine term=bold cterm=bold ctermbg=black
 set scrolloff=4
 
 " Highlight the trailing whitespace
@@ -57,5 +79,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" color related
 set t_Co=256
-colorscheme minimalist
+set background=dark
+colorscheme vice
