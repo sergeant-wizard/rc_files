@@ -10,9 +10,7 @@ Plugin 'vim-scripts/indentpython.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'hdima/python-syntax'
-
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-colorscheme-switcher'
+Plugin 'nvie/vim-flake8'
 
 " colors
 Plugin 'nielsmadan/harlequin'
@@ -83,3 +81,6 @@ set noswapfile
 set t_Co=256
 set background=dark
 colorscheme vice
+
+" flake8
+autocmd BufWritePost *.py call Flake8()
