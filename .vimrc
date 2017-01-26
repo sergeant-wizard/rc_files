@@ -11,6 +11,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'hdima/python-syntax'
 Plugin 'nvie/vim-flake8'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
 
 " colors
 Plugin 'nielsmadan/harlequin'
@@ -84,3 +86,15 @@ colorscheme vice
 
 " flake8
 autocmd BufWritePost *.py call Flake8()
+
+" open quickfix window after grep
+autocmd QuickFixCmdPost *grep* cwindow
+
+" powerline tips and tricks
+set laststatus=2 " Always display the statusline in all windows
+set showtabline=2 " Always display the tabline, even if there is only one tab
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup

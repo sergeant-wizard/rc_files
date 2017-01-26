@@ -1,8 +1,11 @@
+# powerline doesn't work with fish (suggestions disappear)
+# source "/home/ryo/powerline/powerline/bindings/tmux/powerline.conf"
+
 unbind C-l
 set-option -g prefix M-u
 
 bind-key -t vi-copy 'v' begin-selection
-bind-key -t vi-copy 'y' copy-pipe 'xclip -in -selection clipboard'
+bind-key -t vi-copy 'y' copy-pipe 'xclip -in -selection primary'
 
 set -g default-terminal "screen-256color"
 

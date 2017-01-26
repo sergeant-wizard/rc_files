@@ -1,0 +1,12 @@
+gnome-tweak-tool
+gnome-session-xmonad
+keychain
+
+git
+rxvt-unicode-256color
+tmux
+xclip
+
+flake8
+python-dev
+cmake
