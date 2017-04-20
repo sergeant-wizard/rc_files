@@ -8,11 +8,11 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'hdima/python-syntax'
 Plugin 'nvie/vim-flake8'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-git'
+Plugin 'benmills/vimux'
+Plugin 'christoomey/vim-tmux-navigator'
+
 
 " colors
 Plugin 'nielsmadan/harlequin'
@@ -111,4 +111,12 @@ function! MyLastWindow()
         endif
     endif
 endfunction
+
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <C-W>h :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-W>j :TmuxNavigateDown<cr>
+nnoremap <silent> <C-W>k :TmuxNavigateUp<cr>
+nnoremap <silent> <C-W>l :TmuxNavigateRight<cr>
+nnoremap <silent> <C-W>w :TmuxNavigatePrevious<cr>
 
