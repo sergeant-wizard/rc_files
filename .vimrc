@@ -36,6 +36,7 @@ Plugin 'YorickPeterse/happy_hacking.vim'
 
 call vundle#end()
 filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
 
 " END vundle
 
@@ -120,3 +121,5 @@ nnoremap <silent> <C-W>k :TmuxNavigateUp<cr>
 nnoremap <silent> <C-W>l :TmuxNavigateRight<cr>
 nnoremap <silent> <C-W>w :TmuxNavigatePrevious<cr>
 
+set ts=4
+set sw=4
