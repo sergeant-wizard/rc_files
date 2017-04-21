@@ -79,6 +79,8 @@ set clipboard=unnamed
 set nobackup
 set nowritebackup
 set noswapfile
+set ts=4
+set sw=4
 
 " color related
 set t_Co=256
@@ -113,13 +115,13 @@ function! MyLastWindow()
     endif
 endfunction
 
+" tmux navigator
 let g:tmux_navigator_no_mappings = 1
-
-nnoremap <silent> <C-W>h :TmuxNavigateLeft<cr>
-nnoremap <silent> <C-W>j :TmuxNavigateDown<cr>
-nnoremap <silent> <C-W>k :TmuxNavigateUp<cr>
-nnoremap <silent> <C-W>l :TmuxNavigateRight<cr>
-nnoremap <silent> <C-W>w :TmuxNavigatePrevious<cr>
-
-set ts=4
-set sw=4
+nnoremap <silent> <C-W><C-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-W><C-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-W><C-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-W><C-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-W><C-w> :TmuxNavigatePrevious<cr>
+map <Leader>vl :VimuxRunLastCommand<CR>
+map <Leader>vd :call VimuxSendText("exit()")<CR><BAR> :call VimuxSendKeys("Enter")<CR>
+map <Leader>vi :call VimuxRunCommandInDir("ipython --pdb", 1)<CR>
