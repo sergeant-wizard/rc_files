@@ -7,12 +7,18 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-scripts/indentpython.vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'hdima/python-syntax'
 Plugin 'nvie/vim-flake8'
 Plugin 'benmills/vimux'
 Plugin 'christoomey/vim-tmux-navigator'
-
+Plugin 'junegunn/fzf'
+Plugin 'tpope/vim-surround'
+Plugin 'majutsushi/tagbar'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'godlygeek/tabular'
+Plugin 'onerobotics/vim-karel'
 
 " colors
 Plugin 'nielsmadan/harlequin'
@@ -33,24 +39,11 @@ Plugin 'bcicen/vim-vice'
 Plugin 'dracula/vim'
 Plugin 'YorickPeterse/happy_hacking.vim'
 
-
 call vundle#end()
-filetype plugin indent on
-set omnifunc=syntaxcomplete#Complete
-
 " END vundle
 
-" python indentation
-au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent fileformat=unix
-
-" python syntax highlighting
-let python_highlight_all=1
-syntax on
-
-set encoding=utf-8
-
-" ctrlp options
-let g:ctrlp_custom_ignore = 'node_modules'
+filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
 
 " vim native features
 set ic
@@ -59,16 +52,7 @@ set incsearch
 set nowrap
 
 set scrolloff=4
-
-" Highlight the trailing whitespace
-augroup HighlightTrailingSpaces
-  autocmd!
-  autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
-  autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
-augroup END
-
-" YCM options
-let g:ycm_add_preview_to_completeopt = 1
+set encoding=utf-8
 
 " make backspace work over lines
 set backspace=indent,eol,start
@@ -86,6 +70,27 @@ set sw=4
 set t_Co=256
 set background=dark
 colorscheme vice
+
+" python indentation
+au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent fileformat=unix
+
+" python syntax highlighting
+let python_highlight_all=1
+syntax on
+
+" ctrlp options
+let g:ctrlp_custom_ignore = 'node_modules'
+
+
+" Highlight the trailing whitespace
+augroup HighlightTrailingSpaces
+  autocmd!
+  autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
+  autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
+augroup END
+
+" YCM options
+let g:ycm_add_preview_to_completeopt = 1
 
 " flake8
 autocmd BufWritePost *.py call Flake8()
