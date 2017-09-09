@@ -9,7 +9,7 @@ source $ZSH/oh-my-zsh.sh
 eval `keychain --eval id_rsa id_rsa`
 
 # ROS
-source /opt/ros/indigo/setup.zsh
+# source /opt/ros/indigo/setup.zsh
 
 # GPS related envs
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ryo/gps/build/lib

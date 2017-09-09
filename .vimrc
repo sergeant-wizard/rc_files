@@ -19,6 +19,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'godlygeek/tabular'
 Plugin 'onerobotics/vim-karel'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-latex/vim-latex'
 
 " colors
 Plugin 'nielsmadan/harlequin'
@@ -28,14 +30,13 @@ Plugin 'Marfisc/vorange'
 Plugin 'roosta/vim-srcery'
 Plugin 'MvanDiemen/brighton.vim'
 Plugin 'tyrannicaltoucan/vim-deep-space'
+Plugin 'bcicen/vim-vice'
 Plugin 'dikiaap/minimalist'
 Plugin 'davb5/wombat256dave'
-Plugin 'encody/nvim'
 Plugin 'Blevs/vim-dzo'
 Plugin 'kamwitsta/nordisk'
 Plugin 'KeitaNakamura/neodark.vim'
 Plugin 'tyrannicaltoucan/vim-quantum'
-Plugin 'bcicen/vim-vice'
 Plugin 'dracula/vim'
 Plugin 'YorickPeterse/happy_hacking.vim'
 
@@ -65,11 +66,14 @@ set nowritebackup
 set noswapfile
 set ts=4
 set sw=4
+set softtabstop=4
+set autoindent
+set et
 
 " color related
 set t_Co=256
 set background=dark
-colorscheme vice
+colorscheme torte
 
 " python indentation
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent fileformat=unix
