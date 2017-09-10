@@ -1,5 +1,4 @@
-# powerline doesn't work with fish (suggestions disappear)
-# source "/home/ryo/powerline/powerline/bindings/tmux/powerline.conf"
+source "/home/ryo/powerline/powerline/bindings/tmux/powerline.conf"
 
 unbind C-l
 set-option -g prefix M-u
