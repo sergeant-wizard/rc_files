@@ -13,13 +13,17 @@ Plugin 'nvie/vim-flake8'
 Plugin 'benmills/vimux'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'majutsushi/tagbar'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'godlygeek/tabular'
 Plugin 'Valloric/YouCompleteMe'
-" Plugin 'vim-latex/vim-latex'
-" Plugin 'onerobotics/vim-karel'
+Plugin 'onerobotics/vim-karel'
+Plugin 'vim-latex/vim-latex'
+Plugin 'tpope/vim-obsession'
+Plugin 'tpope/vim-sensible'
+Plugin 'taglist.vim'
 
 " colors
 Plugin 'bcicen/vim-vice'
@@ -36,11 +40,7 @@ set ar
 set incsearch
 set nowrap
 
-set scrolloff=4
 set encoding=utf-8
-
-" make backspace work over lines
-set backspace=indent,eol,start
 
 " share clipborad
 set clipboard=unnamed
@@ -68,6 +68,9 @@ syntax on
 
 " ctrlp options
 let g:ctrlp_custom_ignore = 'node_modules'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+let g:ctrlp_extensions = ['tag', 'dir']
+let g:ctrlp_types = ['fil', 'mru', 'tag']
 
 
 " Highlight the trailing whitespace
@@ -86,14 +89,14 @@ autocmd BufWritePost *.py call Flake8()
 " open quickfix window after grep
 autocmd QuickFixCmdPost *grep* cwindow
 
-" powerline tips and tricks
-set laststatus=2 " Always display the statusline in all windows
-set showtabline=2 " Always display the tabline, even if there is only one tab
-set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
-
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+" " powerline tips and tricks
+" set laststatus=2 " Always display the statusline in all windows
+" set showtabline=2 " Always display the tabline, even if there is only one tab
+" set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+" 
+" python from powerline.vim import setup as powerline_setup
+" python powerline_setup()
+" python del powerline_setup
 
 
 " automatically quit quickfix window
@@ -118,3 +121,6 @@ nnoremap <silent> <C-W><C-w> :TmuxNavigatePrevious<cr>
 map <Leader>vl :VimuxRunLastCommand<CR>
 map <Leader>vd :call VimuxSendText("exit()")<CR><BAR> :call VimuxSendKeys("Enter")<CR>
 map <Leader>vi :call VimuxRunCommandInDir("ipython --pdb", 1)<CR>
+
+" Jump to matching HTML tags with %
+runtime macros/matchit.vim
