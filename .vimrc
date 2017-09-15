@@ -124,3 +124,6 @@ map <Leader>vi :call VimuxRunCommandInDir("ipython --pdb", 1)<CR>
 
 " Jump to matching HTML tags with %
 runtime macros/matchit.vim
+
+" enable mouse
+set mouse=a
