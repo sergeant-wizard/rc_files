@@ -6,24 +6,34 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'vim-scripts/indentpython.vim'
+
+" fuzzy search
+" Plugin 'junegunn/fzf.vim'
+" Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'ctrlpvim/ctrlp.vim'
+
+" python
+Plugin 'vim-scripts/indentpython.vim'
 Plugin 'hdima/python-syntax'
 Plugin 'nvie/vim-flake8'
+Plugin 'Valloric/YouCompleteMe'
+
+" misc languages
+Plugin 'onerobotics/vim-karel'
+Plugin 'vim-latex/vim-latex'
+
+" tmux
 Plugin 'benmills/vimux'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
+
 Plugin 'tpope/vim-surround'
 Plugin 'majutsushi/tagbar'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'godlygeek/tabular'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'onerobotics/vim-karel'
-Plugin 'vim-latex/vim-latex'
 Plugin 'tpope/vim-obsession'
 Plugin 'tpope/vim-sensible'
 Plugin 'taglist.vim'
+Plugin 'haya14busa/incsearch.vim'
 
 " colors
 Plugin 'bcicen/vim-vice'
@@ -37,10 +47,13 @@ set omnifunc=syntaxcomplete#Complete
 " vim native features
 set ic
 set ar
-set incsearch
 set nowrap
-
 set encoding=utf-8
+
+" incsearch
+set incsearch
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
 
 " share clipborad
 set clipboard=unnamed
@@ -57,7 +70,7 @@ set et
 " color related
 set t_Co=256
 set background=dark
-colorscheme torte
+colorscheme vice
 
 " python indentation
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent fileformat=unix
