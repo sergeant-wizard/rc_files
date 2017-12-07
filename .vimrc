@@ -5,7 +5,11 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'tpope/vim-projectionist'
+Plugin 'tpope/vim-commentary'
+
 Plugin 'gmarik/Vundle.vim'
+Plugin 'funorpain/vim-cpplint'
 
 " fuzzy search
 " Plugin 'junegunn/fzf.vim'
@@ -27,11 +31,12 @@ Plugin 'benmills/vimux'
 Plugin 'christoomey/vim-tmux-navigator'
 
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-obsession'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-dispatch'
 Plugin 'majutsushi/tagbar'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'godlygeek/tabular'
-Plugin 'tpope/vim-obsession'
-Plugin 'tpope/vim-sensible'
 Plugin 'taglist.vim'
 Plugin 'haya14busa/incsearch.vim'
 
@@ -140,3 +145,29 @@ runtime macros/matchit.vim
 
 " enable mouse
 set mouse=a
+
+set foldlevelstart=20
+
+" vim-snipe
+map <leader><leader>F <Plug>(snipe-F)
+map <leader><leader>f <Plug>(snipe-f)
+map <leader><leader>T <Plug>(snipe-T)
+map <leader><leader>t <Plug>(snipe-t)
+
+map <leader><leader>w <Plug>(snipe-w)
+map <leader><leader>W <Plug>(snipe-W)
+map <leader><leader>e <Plug>(snipe-e)
+map <leader><leader>E <Plug>(snipe-E)
+map <leader><leader>b <Plug>(snipe-b)
+map <leader><leader>B <Plug>(snipe-B)
+map <leader><leader>ge <Plug>(snipe-ge)
+map <leader><leader>gE <Plug>(snipe-gE)
+
+nmap <leader><leader>] <Plug>(snipe-f-xp)
+nmap <leader><leader>[ <Plug>(snipe-f-xp)
+
+nmap <leader><leader>x <Plug>(snipe-f-x)
+nmap <leader><leader>X <Plug>(snipe-F-x)
+
+nmap <leader><leader>r <Plug>(snipe-f-r)
+nmap <leader><leader>R <Plug>(snipe-F-r)
