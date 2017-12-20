@@ -5,16 +5,15 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'tpope/vim-projectionist'
-Plugin 'tpope/vim-commentary'
-
 Plugin 'gmarik/Vundle.vim'
 Plugin 'funorpain/vim-cpplint'
-
-" fuzzy search
-" Plugin 'junegunn/fzf.vim'
-" Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'ctrlpvim/ctrlp.vim'
+
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+Plugin 'tpope/vim-projectionist'
+Plugin 'tpope/vim-commentary'
 
 " python
 Plugin 'vim-scripts/indentpython.vim'
@@ -34,7 +33,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-obsession'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-dispatch'
-Plugin 'majutsushi/tagbar'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'godlygeek/tabular'
 Plugin 'taglist.vim'
@@ -107,15 +105,6 @@ autocmd BufWritePost *.py call Flake8()
 " open quickfix window after grep
 autocmd QuickFixCmdPost *grep* cwindow
 
-" " powerline tips and tricks
-" set laststatus=2 " Always display the statusline in all windows
-" set showtabline=2 " Always display the tabline, even if there is only one tab
-" set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
-" 
-" python from powerline.vim import setup as powerline_setup
-" python powerline_setup()
-" python del powerline_setup
-
 
 " automatically quit quickfix window
 au BufEnter * call MyLastWindow()
@@ -148,26 +137,5 @@ set mouse=a
 
 set foldlevelstart=20
 
-" vim-snipe
-map <leader><leader>F <Plug>(snipe-F)
-map <leader><leader>f <Plug>(snipe-f)
-map <leader><leader>T <Plug>(snipe-T)
-map <leader><leader>t <Plug>(snipe-t)
-
-map <leader><leader>w <Plug>(snipe-w)
-map <leader><leader>W <Plug>(snipe-W)
-map <leader><leader>e <Plug>(snipe-e)
-map <leader><leader>E <Plug>(snipe-E)
-map <leader><leader>b <Plug>(snipe-b)
-map <leader><leader>B <Plug>(snipe-B)
-map <leader><leader>ge <Plug>(snipe-ge)
-map <leader><leader>gE <Plug>(snipe-gE)
-
-nmap <leader><leader>] <Plug>(snipe-f-xp)
-nmap <leader><leader>[ <Plug>(snipe-f-xp)
-
-nmap <leader><leader>x <Plug>(snipe-f-x)
-nmap <leader><leader>X <Plug>(snipe-F-x)
-
-nmap <leader><leader>r <Plug>(snipe-f-r)
-nmap <leader><leader>R <Plug>(snipe-F-r)
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
