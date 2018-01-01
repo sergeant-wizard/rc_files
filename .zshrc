@@ -1,34 +1,29 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/ryo/.oh-my-zsh
+export ZSH_THEME="powerlevel9k/powerlevel9k"
+export TERM="xterm-256color"
 
 HYPHEN_INSENSITIVE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(git zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
-eval `keychain --eval id_rsa id_rsa`
-
-# ROS
-# source /opt/ros/indigo/setup.zsh
-
-# GPS related envs
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ryo/gps/build/lib
-export PYTHONPATH=$PYTHONPATH:/home/ryo/gps/build/lib
-
-# caffe
-export PYTHONPATH=$PYTHONPATH:/home/ryo/caffe/python
+eval `keychain --eval id_rsa_0424 id_rsa_0424`
 
 # Z
 . ~/z/z.sh
 
-export PATH=/home/ryo/vim/bin:$PATH
-
-. /home/ryo/powerline/powerline/bindings/zsh/powerline.zsh
-
-export PATH=/home/ryo/toroboarmcommandlineclient:$PATH
-export PATH=/home/ryo/bin:$PATH
-
-eval `dircolors /home/ryo/.dir_colors/dircolors`
+# color ls
+eval `dircolors /home/ryo/dircolors-solarized/dircolors.256dark`
 
 alias putclip='xclip -selection c'
 alias getclip='xclip -selection clipboard -o'
+
+export EDITOR=vim
+export VISUAL=vim
+
+alias vim=/home/ryo/vim/bin/vim
+
+if [[ -a ~/.zshrc.local ]]; then
+    . ~/.zshrc.local
+fi
