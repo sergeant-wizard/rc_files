@@ -2,6 +2,7 @@
 export ZSH=/home/ryo/.oh-my-zsh
 export ZSH_THEME="powerlevel9k/powerlevel9k"
 export TERM="xterm-256color"
+export POWERLEVEL9K_MODE='nerdfont-complete'
 
 HYPHEN_INSENSITIVE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
