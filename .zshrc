@@ -36,6 +36,7 @@ export EDITOR=vim
 export VISUAL=vim
 
 alias vim=/home/ryo/vim/bin/vim
+alias ls='ls --color=auto'
 
 if [[ -a ~/.zshrc.local ]]; then
     . ~/.zshrc.local
