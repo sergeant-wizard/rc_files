@@ -23,7 +23,9 @@ if ! zgen saved; then
     zgen save
 fi
 
-export POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs newline)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs)
 
 HYPHEN_INSENSITIVE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
