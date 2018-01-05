@@ -39,7 +39,8 @@ Plugin 'taglist.vim'
 Plugin 'haya14busa/incsearch.vim'
 
 " colors
-Plugin 'bcicen/vim-vice'
+Plugin 'flazz/vim-colorschemes'
+
 
 call vundle#end()
 " END vundle
@@ -73,7 +74,7 @@ set et
 " color related
 set t_Co=256
 set background=dark
-colorscheme vice
+colorscheme badwolf
 
 " python indentation
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent fileformat=unix
