@@ -1,4 +1,4 @@
-sudo apt-get install git gnome-tweak-tool zsh curl tilda tmux python-pip build-essential cmake exuberant-ctags flake8 powerline ibus-mozc
+sudo apt-get install git gnome-tweak-tool zsh curl tilda tmux python-pip build-essential cmake exuberant-ctags flake8 powerline ibus-mozc xclip
 pip install virtualenv numpy ipython
 make caps lock additional ctrl in gnome-tweak-tools
 download id_rsa
