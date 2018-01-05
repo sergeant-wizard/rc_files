@@ -1,0 +1,14 @@
+sudo apt-get install git gnome-tweak-tool zsh curl tilda tmux python-pip build-essential cmake exuberant-ctags flake8 powerline
+pip install virtualenv numpy ipython
+make caps lock additional ctrl in gnome-tweak-tools
+download id_rsa
+clone rc_files
+clone powerline
+install chrome
+install oh-my-zsh
+install powerline nerd font inconsolata
+install antigen
+install miniconda
+build vim
+install vundle
+install docker
