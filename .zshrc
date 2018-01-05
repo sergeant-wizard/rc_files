@@ -9,6 +9,7 @@ zstyle :omz:plugins:ssh-agent identities id_rsa_0424
 
 source ${HOME}/antigen.zsh
 
+antigen use oh-my-zsh
 antigen bundle git
 antigen bundle pip
 antigen bundle command-not-found
@@ -35,7 +36,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 export EDITOR=vim
 export VISUAL=vim
 
-alias vim=/home/ryo/vim/bin/vim
+alias vim=/home/ryo/vim/build/bin/vim
 alias ls='ls --color=auto'
 
 if [[ -a ~/.zshrc.local ]]; then
