@@ -26,6 +26,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle joel-porquet/zsh-dircolors-solarized.git
+antigen bundle andrewferrier/fzf-z
 
 antigen theme bhilburn/powerlevel9k powerlevel9k
 antigen apply
@@ -36,9 +37,10 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 export EDITOR=vim
 export VISUAL=vim
 
-alias vim=/home/ryo/vim/build/bin/vim
 alias ls='ls --color=auto'
 
 if [[ -a ~/.zshrc.local ]]; then
     . ~/.zshrc.local
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
