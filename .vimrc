@@ -9,6 +9,9 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'funorpain/vim-cpplint'
 Plugin 'ctrlpvim/ctrlp.vim'
 
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
+
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -144,3 +147,5 @@ let g:airline#extensions#tabline#enabled = 1
 " make background transparent
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
+
+command! -bang -nargs=* GGrep call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
