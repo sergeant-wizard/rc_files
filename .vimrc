@@ -7,7 +7,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'funorpain/vim-cpplint'
-Plugin 'ctrlpvim/ctrlp.vim'
+" Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
@@ -87,10 +87,10 @@ let python_highlight_all=1
 syntax on
 
 " ctrlp options
-let g:ctrlp_custom_ignore = 'node_modules'
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
-let g:ctrlp_extensions = ['tag', 'dir']
-let g:ctrlp_types = ['fil', 'mru', 'tag']
+" let g:ctrlp_custom_ignore = 'node_modules'
+" let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+" let g:ctrlp_extensions = ['tag', 'dir']
+" let g:ctrlp_types = ['fil', 'mru', 'tag']
 
 
 " Highlight the trailing whitespace
@@ -149,3 +149,4 @@ hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
 
 command! -bang -nargs=* GGrep call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
+map <C-p> :FZF<CR>
