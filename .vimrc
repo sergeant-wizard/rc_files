@@ -63,7 +63,7 @@ map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 
 " share clipborad
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 set nobackup
 set nowritebackup
