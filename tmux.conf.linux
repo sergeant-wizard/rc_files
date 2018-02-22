@@ -4,7 +4,7 @@ unbind C-l
 set-option -g prefix M-u
 
 bind-key -t vi-copy 'v' begin-selection
-bind-key -t vi-copy 'y' copy-pipe 'xclip -in -selection primary'
+bind-key -t vi-copy 'y' copy-pipe 'xclip -in -selection clipboard'
 
 set -g default-terminal "screen-256color"
 
