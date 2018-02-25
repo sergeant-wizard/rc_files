@@ -20,7 +20,6 @@ antigen bundle docker
 antigen bundle python
 antigen bundle pylint
 antigen bundle ssh-agent
-antigen bundle z
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
