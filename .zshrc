@@ -5,8 +5,6 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs newline)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs)
 
-zstyle :omz:plugins:ssh-agent identities id_rsa_0424
-
 source ${HOME}/antigen.zsh
 
 antigen use oh-my-zsh
@@ -19,7 +17,6 @@ antigen bundle clipboard
 antigen bundle docker
 antigen bundle python
 antigen bundle pylint
-antigen bundle ssh-agent
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
