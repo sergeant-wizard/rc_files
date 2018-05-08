@@ -1,52 +1,59 @@
-" START vundle
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'funorpain/vim-cpplint'
-" Plugin 'ctrlpvim/ctrlp.vim'
+Plug 'gmarik/Vundle.vim'
+Plug 'funorpain/vim-cpplint'
+" Plug 'ctrlpvim/ctrlp.vim'
 
-Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plugin 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
-Plugin 'tpope/vim-projectionist'
-Plugin 'tpope/vim-commentary'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-commentary'
 
 " python
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'hdima/python-syntax'
-Plugin 'nvie/vim-flake8'
-Plugin 'Valloric/YouCompleteMe'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'hdima/python-syntax'
+Plug 'nvie/vim-flake8'
+" Plug 'Valloric/YouCompleteMe'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'zchee/deoplete-jedi'
+let g:deoplete#enable_at_startup = 1
 
 " misc languages
-Plugin 'onerobotics/vim-karel'
-Plugin 'vim-latex/vim-latex'
+Plug 'onerobotics/vim-karel'
+Plug 'vim-latex/vim-latex'
 
 " tmux
-Plugin 'benmills/vimux'
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'benmills/vimux'
 
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-obsession'
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-dispatch'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'godlygeek/tabular'
-Plugin 'taglist.vim'
-Plugin 'haya14busa/incsearch.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-dispatch'
+Plug 'airblade/vim-gitgutter'
+Plug 'godlygeek/tabular'
+Plug 'haya14busa/incsearch.vim'
 
 " colors
-Plugin 'flazz/vim-colorschemes'
+Plug 'flazz/vim-colorschemes'
 
-
-call vundle#end()
-" END vundle
+call plug#end()
 
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
