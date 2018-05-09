@@ -8,7 +8,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'gmarik/Vundle.vim'
 Plug 'funorpain/vim-cpplint'
-" Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -22,7 +21,7 @@ Plug 'tpope/vim-commentary'
 " python
 Plug 'vim-scripts/indentpython.vim'
 Plug 'hdima/python-syntax'
-Plug 'nvie/vim-flake8'
+Plug 'tell-k/vim-autopep8'
 Plug 'Valloric/YouCompleteMe'
 
 " if has('nvim')
@@ -39,13 +38,11 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'onerobotics/vim-karel'
 Plug 'vim-latex/vim-latex'
 
-" tmux
-Plug 'benmills/vimux'
-
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-dispatch'
+Plug 'neomake/neomake'
 Plug 'airblade/vim-gitgutter'
 Plug 'godlygeek/tabular'
 Plug 'haya14busa/incsearch.vim'
@@ -93,13 +90,6 @@ au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab au
 let python_highlight_all=1
 syntax on
 
-" ctrlp options
-" let g:ctrlp_custom_ignore = 'node_modules'
-" let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
-" let g:ctrlp_extensions = ['tag', 'dir']
-" let g:ctrlp_types = ['fil', 'mru', 'tag']
-
-
 " Highlight the trailing whitespace
 augroup HighlightTrailingSpaces
   autocmd!
@@ -109,9 +99,6 @@ augroup END
 
 " YCM options
 let g:ycm_add_preview_to_completeopt = 1
-
-" flake8
-autocmd BufWritePost *.py call Flake8()
 
 " open quickfix window after grep
 autocmd QuickFixCmdPost *grep* cwindow
@@ -129,17 +116,6 @@ function! MyLastWindow()
     endif
 endfunction
 
-" tmux navigator
-let g:tmux_navigator_no_mappings = 1
-nnoremap <silent> <C-W><C-h> :TmuxNavigateLeft<cr>
-nnoremap <silent> <C-W><C-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <C-W><C-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <C-W><C-l> :TmuxNavigateRight<cr>
-nnoremap <silent> <C-W><C-w> :TmuxNavigatePrevious<cr>
-map <Leader>vl :VimuxRunLastCommand<CR>
-map <Leader>vd :call VimuxSendText("exit()")<CR><BAR> :call VimuxSendKeys("Enter")<CR>
-map <Leader>vi :call VimuxRunCommandInDir("ipython --pdb", 1)<CR>
-
 " Jump to matching HTML tags with %
 runtime macros/matchit.vim
 
@@ -155,5 +131,9 @@ let g:airline#extensions#tabline#enabled = 1
 hi! Normal ctermbg=NONE guibg=NONE
 hi! NonText ctermbg=NONE guibg=NONE
 
+" fzf
 command! -bang -nargs=* GGrep call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
 map <C-p> :FZF<CR>
+
+" neomake
+call neomake#configure#automake('nrwi', 500)
