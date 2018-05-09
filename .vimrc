@@ -23,17 +23,17 @@ Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'hdima/python-syntax'
 Plug 'nvie/vim-flake8'
-" Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-Plug 'zchee/deoplete-jedi'
-let g:deoplete#enable_at_startup = 1
+" if has('nvim')
+"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"   Plug 'Shougo/deoplete.nvim'
+"   Plug 'roxma/nvim-yarp'
+"   Plug 'roxma/vim-hug-neovim-rpc'
+" endif
+" Plug 'zchee/deoplete-jedi'
+" let g:deoplete#enable_at_startup = 1
 
 " misc languages
 Plug 'onerobotics/vim-karel'
