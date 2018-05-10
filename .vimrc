@@ -1,12 +1,5 @@
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
 call plug#begin('~/.vim/plugged')
 
-Plug 'gmarik/Vundle.vim'
 Plug 'funorpain/vim-cpplint'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -24,20 +17,11 @@ Plug 'hdima/python-syntax'
 Plug 'tell-k/vim-autopep8'
 Plug 'Valloric/YouCompleteMe'
 
-" if has('nvim')
-"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" else
-"   Plug 'Shougo/deoplete.nvim'
-"   Plug 'roxma/nvim-yarp'
-"   Plug 'roxma/vim-hug-neovim-rpc'
-" endif
-" Plug 'zchee/deoplete-jedi'
-" let g:deoplete#enable_at_startup = 1
-
 " misc languages
 Plug 'onerobotics/vim-karel'
 Plug 'vim-latex/vim-latex'
 
+Plug 'benmills/vimux'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-sensible'
