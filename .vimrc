@@ -12,6 +12,7 @@ Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-commentary'
 
 " python
+Plug 'nvie/vim-flake8'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'hdima/python-syntax'
 Plug 'tell-k/vim-autopep8'
@@ -26,7 +27,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-dispatch'
-Plug 'neomake/neomake'
 Plug 'airblade/vim-gitgutter'
 Plug 'godlygeek/tabular'
 Plug 'haya14busa/incsearch.vim'
@@ -119,5 +119,5 @@ hi! NonText ctermbg=NONE guibg=NONE
 command! -bang -nargs=* GGrep call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
 map <C-p> :FZF<CR>
 
-" neomake
-call neomake#configure#automake('nrwi', 500)
+" flake8
+autocmd BufWritePost *.py call Flake8()
