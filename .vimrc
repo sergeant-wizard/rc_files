@@ -121,3 +121,6 @@ map <C-p> :FZF<CR>
 
 " flake8
 autocmd BufWritePost *.py call Flake8()
+
+" vimux
+map <Leader>vl :VimuxRunLastCommand<CR>
