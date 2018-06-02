@@ -10,6 +10,8 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-commentary'
+Plug 'jbgutierrez/vim-better-comments'
+Plug 'janko-m/vim-test'
 
 " python
 Plug 'nvie/vim-flake8'
@@ -83,6 +85,7 @@ augroup END
 
 " YCM options
 let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_python_binary_path = '/home/ryo/.pyenv/shims/python'
 
 " open quickfix window after grep
 autocmd QuickFixCmdPost *grep* cwindow
@@ -118,9 +121,13 @@ hi! NonText ctermbg=NONE guibg=NONE
 " fzf
 command! -bang -nargs=* GGrep call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
 map <C-p> :FZF<CR>
+let $FZF_DEFAULT_COMMAND = 'ag -g "" -f'
 
 " flake8
 autocmd BufWritePost *.py call Flake8()
 
 " vimux
 map <Leader>vl :VimuxRunLastCommand<CR>
+
+" vim-test
+let test#strategy = "dispatch"
