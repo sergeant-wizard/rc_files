@@ -121,7 +121,7 @@ hi! NonText ctermbg=NONE guibg=NONE
 " fzf
 command! -bang -nargs=* GGrep call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
 map <C-p> :FZF<CR>
-let $FZF_DEFAULT_COMMAND = 'ag -g "" -f'
+let $FZF_DEFAULT_COMMAND = 'ag -g "" -f --hidden'
 
 " flake8
 autocmd BufWritePost *.py call Flake8()
