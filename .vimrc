@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'vim-scripts/YankRing.vim'
 Plug 'funorpain/vim-cpplint'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -134,3 +135,7 @@ map <Leader>vl :VimuxRunLastCommand<CR>
 
 " vim-test
 let test#strategy = "dispatch"
+
+" yank ring
+let g:yankring_replace_n_pkey = ''
+let g:yankring_replace_n_nkey = ''
