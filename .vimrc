@@ -88,6 +88,7 @@ augroup END
 " YCM options
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_python_binary_path = '/home/ryo/.pyenv/shims/python'
+nnoremap <leader>yg :YcmCompleter GoToDeclaration<CR>
 
 " open quickfix window after grep
 autocmd QuickFixCmdPost *grep* cwindow
