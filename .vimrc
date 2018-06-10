@@ -13,6 +13,7 @@ Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-commentary'
 Plug 'jbgutierrez/vim-better-comments'
 Plug 'janko-m/vim-test'
+Plug 'chazy/dirsettings'
 
 " python
 Plug 'nvie/vim-flake8'
