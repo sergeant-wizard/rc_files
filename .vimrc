@@ -124,7 +124,7 @@ hi! NonText ctermbg=NONE guibg=NONE
 " fzf
 command! -bang -nargs=* GGrep call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
 nmap <C-p> :FZF<CR>
-let $FZF_DEFAULT_COMMAND = 'ag -g "" -f --hidden'
+let $FZF_DEFAULT_COMMAND = 'ag -g "" -f --hidden --ignore ".git"'
 let g:fzf_action = {
   \ 'ctrl-t': 'tab drop',
   \ 'ctrl-v': 'vsplit' }
