@@ -35,6 +35,19 @@ export VISUAL=vim
 
 alias ls='ls --color=auto'
 
+
+alias gch='git checkout'
+alias gco='git commit'
+alias gfo='git fetch origin'
+alias gl='git log'
+alias gpo='git push origin'
+alias gs='git status'
+alias gsu='git submodule update --init --force'
+
+alias dcl='docker container ls'
+alias dck='docker container kill'
+alias dcr='docker container remove'
+
 if [[ -a ~/.zshrc.local ]]; then
     . ~/.zshrc.local
 fi
