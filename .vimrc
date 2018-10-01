@@ -23,6 +23,7 @@ Plug 'tell-k/vim-autopep8'
 Plug 'Valloric/YouCompleteMe'
 
 " misc languages
+Plug 'leafgarland/typescript-vim'
 Plug 'onerobotics/vim-karel'
 Plug 'vim-latex/vim-latex'
 
