@@ -1,25 +1,20 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'vim-scripts/YankRing.vim'
 Plug 'funorpain/vim-cpplint'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-commentary'
-Plug 'jbgutierrez/vim-better-comments'
 Plug 'janko-m/vim-test'
 Plug 'chazy/dirsettings'
 
 " python
-Plug 'nvie/vim-flake8'
+Plug 'w0rp/ale'
 Plug 'vim-scripts/indentpython.vim'
-Plug 'hdima/python-syntax'
-Plug 'tell-k/vim-autopep8'
 Plug 'Valloric/YouCompleteMe'
 
 " misc languages
@@ -88,7 +83,7 @@ augroup END
 
 " YCM options
 let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_python_binary_path = '/home/ryo/.pyenv/shims/python'
+" let g:ycm_python_binary_path = '/home/ryo/.pyenv/shims/python'
 nnoremap <leader>yg :YcmCompleter GoToDeclaration<CR>
 
 " open quickfix window after grep
@@ -130,8 +125,10 @@ let g:fzf_action = {
   \ 'ctrl-t': 'tab drop',
   \ 'ctrl-v': 'vsplit' }
 
-" flake8
-autocmd BufWritePost *.py call Flake8()
+" ale
+let g:ale_linters = {
+  \   'python': ['flake8', 'isort',],
+\}
 
 " vimux
 map <Leader>vl :VimuxRunLastCommand<CR>
