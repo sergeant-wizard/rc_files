@@ -3,8 +3,12 @@ source "/home/ryo/powerline/powerline/bindings/tmux/powerline.conf"
 unbind C-l
 set-option -g prefix M-u
 
-bind -T copy-mode-vi v send-keys -X begin-selection
-bind -T copy-mode-vi y send -X copy-pipe "xclip -i -sel p -f | xclip -i -sel c" \; display-message "copied to system clipboard"
+bind-key -t vi-copy 'v' begin-selection
+bind-key -t vi-copy 'y' copy-selection
+bind -t vi-copy y copy-pipe "xclip -sel clip -i"
+
+# bind -T copy-mode-vi v send-keys -X begin-selection
+# bind -T copy-mode-vi y send -X copy-pipe "xclip -i -sel p -f | xclip -i -sel c" \; display-message "copied to system clipboard"
 
 set -g default-terminal "screen-256color"
 
