@@ -127,8 +127,14 @@ let g:fzf_action = {
 
 " ale
 let g:ale_linters = {
-  \   'python': ['flake8', 'isort',],
+\   'python': ['mypy', 'flake8', 'isort'],
 \}
+let g:ale_fixers = {
+\   'python': [
+\       'isort', 'trim_whitespace', 'autopep8'
+\   ],
+\}
+
 
 " vimux
 map <Leader>vl :VimuxRunLastCommand<CR>
