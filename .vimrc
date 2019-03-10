@@ -1,3 +1,5 @@
+let g:python3_host_prog='/home/ryo/.pyenv/shims/python'
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'funorpain/vim-cpplint'
@@ -15,7 +17,15 @@ Plug 'chazy/dirsettings'
 " python
 Plug 'w0rp/ale'
 Plug 'vim-scripts/indentpython.vim'
-Plug 'Valloric/YouCompleteMe'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  let g:deoplete#enable_at_startup = 1
+else
+  Plug 'Valloric/YouCompleteMe'
+  " Plug 'Shougo/deoplete.nvim'
+  " Plug 'roxma/nvim-yarp'
+  " Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 " misc languages
 Plug 'leafgarland/typescript-vim'
@@ -27,6 +37,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'godlygeek/tabular'
 Plug 'haya14busa/incsearch.vim'
@@ -112,10 +123,6 @@ set foldlevelstart=20
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-
-" make background transparent
-hi! Normal ctermbg=NONE guibg=NONE
-hi! NonText ctermbg=NONE guibg=NONE
 
 " fzf
 command! -bang -nargs=* GGrep call fzf#vim#grep('git grep --line-number '.shellescape(<q-args>), 0, <bang>0)
