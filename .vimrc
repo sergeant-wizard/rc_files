@@ -11,6 +11,7 @@ Plug 'itchyny/lightline.vim'
 
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'janko-m/vim-test'
 Plug 'chazy/dirsettings'
 
@@ -141,6 +142,7 @@ let g:ale_fixers = {
 \       'isort', 'trim_whitespace', 'autopep8'
 \   ],
 \}
+let g:ale_python_mypy_options = '--ignore-missing'
 
 
 " vimux
