@@ -41,7 +41,6 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'godlygeek/tabular'
-Plug 'haya14busa/incsearch.vim'
 
 " colors
 Plug 'flazz/vim-colorschemes'
@@ -56,11 +55,7 @@ set ic
 set ar
 set nowrap
 set encoding=utf-8
-
-" incsearch
-set incsearch
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
+set nohlsearch
 
 " share clipborad
 set clipboard=unnamedplus
