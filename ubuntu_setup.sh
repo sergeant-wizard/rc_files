@@ -5,5 +5,5 @@ pushd
 git clone git@github.com:sergeant-wizard/rc_files
 ln -s rc_files/.vimrc .
 ln -s rc_files/tmux.conf.linux .tmux.conf
-git clone git@github.com:vim/vim
-git clone git@github.com:powerline/powerline
+git clone https://github.com/vim/vim
+git clone https://github.com/powerline/powerline
