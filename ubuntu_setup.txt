@@ -14,3 +14,6 @@ install fzf
 build vim
 install vundle
 install docker
+
+python 3.8.2
+zlib1g-dev libssl-dev libffi-dev libsqlite3-dev libreadline-dev bzip2-dev lbzip2 libbz2-dev liblzma-dev
