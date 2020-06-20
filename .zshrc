@@ -1,4 +1,4 @@
-export ZSH_THEME="powerlevel9k/powerlevel9k"
+export ZSH_THEME="powerlevel10k/powerlevel10k"
 export TERM="xterm-256color"
 
 POWERLEVEL9K_MODE='nerdfont-complete'
@@ -28,7 +28,7 @@ antigen bundle zsh-users/zsh-completions
 antigen bundle joel-porquet/zsh-dircolors-solarized.git
 antigen bundle andrewferrier/fzf-z
 
-antigen theme bhilburn/powerlevel9k powerlevel9k
+antigen theme romkatv/powerlevel10k
 antigen apply
 
 HYPHEN_INSENSITIVE="true"
